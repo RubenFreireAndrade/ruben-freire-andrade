@@ -1,7 +1,5 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
+import { Avatar, Code, Snippet, Link } from "@nextui-org/react";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
@@ -12,6 +10,11 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <Avatar className="w-40 h-40" />
+        {/* TODO: Add Avatar, Tech used */}
+        <div className="text-foreground">{siteConfig.profile}</div>
+        <div>TECHNOLOGIES:</div>
+
         <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={title()}>Make&nbsp;</h1>
           <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
