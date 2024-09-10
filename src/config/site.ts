@@ -1,8 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Ruben Freire Andrade",
   profile:
     "I hold a degree in Games programming with passion for web and software development. I have a fascination with the dynamic world of programming. Eager to immerse myself in collaborative environments working alongside skilled programmers, I am driven to succeed in the field. My aim is to secure a challenging position and gain valuable experience in order to grow both personally and professionally.",
   navItems: [
@@ -12,51 +11,28 @@ export const siteConfig = {
     },
     {
       label: "Projects",
-      href: "/docs",
+      children: [
+        {
+          label: "Lucid Forms",
+          href: "/projects/lucid-forms",
+        },
+        {
+          label: "SecureShare",
+          href: "/projects/secureshare",
+        },
+        {
+          label: "Majestic Miles",
+          href: "/projects/majestic-miles",
+        },
+      ],
     },
     {
       label: "About",
-      href: "/pricing",
-    },
-  ],
-
-  // TODO: Add projects for dropdown
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      href: "/about",
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
+    github: "https://github.com/RubenFreireAndrade",
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui-docs-v2.vercel.app",
     discord: "https://discord.gg/9b6yyZKmH4",
