@@ -1,5 +1,3 @@
-import { Link } from "@nextui-org/link";
-
 import { Navibar } from "@/components/Navibar";
 
 export default function DefaultLayout({
@@ -8,24 +6,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col h-screen bg-gradient-to-b from-blue-100 to-red-100">
-      <Navibar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
-        {children}
-      </main>
-
-      {/* Create your own footer */}
-      <footer className="w-full flex items-center justify-center py-3">
-        <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
-          title="nextui.org homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
-        </Link>
-      </footer>
-    </div>
+    // bg-gradient-to-b from-blue-100 to-red-100
+    <Navibar>{children}</Navibar>
   );
 }
