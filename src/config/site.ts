@@ -31,6 +31,23 @@ export const siteConfig = {
       href: "/about",
     },
   ],
+  carouselItems: [
+    {
+      label: "Lucid Forms",
+      href: "/projects/lucid-forms",
+      src: "/src/assets/UEDEMO_500w.gif",
+    },
+    {
+      label: "SecureShare",
+      href: "/projects/secureshare",
+      src: "/src/assets/ss-app.gif",
+    },
+    {
+      label: "Majestic Miles",
+      href: "/projects/majestic-miles",
+      src: "/src/assets/mm-autocomplete.gif",
+    },
+  ],
   links: {
     github: "https://github.com/RubenFreireAndrade",
     twitter: "https://twitter.com/getnextui",

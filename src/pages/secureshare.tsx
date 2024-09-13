@@ -65,7 +65,6 @@ export default function SecureShare() {
                 <h4 className="font-medium">device:Rubs:Windows</h4>
               </p> */}
             </div>
-
           </section>
         </div>
       </section>

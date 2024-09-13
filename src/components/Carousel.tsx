@@ -1,8 +1,11 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { Link } from "@nextui-org/react";
 
-const Carousel: React.FC<{ slides: string[] }> = ({ slides }) => {
+import { siteConfig } from "@/config/site";
+
+const Carousel: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000 }),
   ]);
@@ -16,7 +19,7 @@ const Carousel: React.FC<{ slides: string[] }> = ({ slides }) => {
   }, [emblaApi]);
 
   return (
-    <>
+    <div className="flex justify-center items-center">
       <button aria-label="Previous" className="p-2" onClick={scrollPrev}>
         <svg
           className="w-8 h-8 text-content1-foreground"
@@ -34,15 +37,20 @@ const Carousel: React.FC<{ slides: string[] }> = ({ slides }) => {
         </svg>
       </button>
 
-      <div ref={emblaRef} className="overflow-hidden">
+      <div ref={emblaRef} className="overflow-hidden w-full max-w-3xl">
         <div className="flex">
-          {slides.map((slide, index) => (
-            <div key={index} className="w-full flex-shrink-0">
-              <img
-                alt={`Slide ${index + 1}`}
-                className="object-contain w-full h-64"
-                src={slide}
-              />
+          {siteConfig.carouselItems.map((slide, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-shrink-0 justify-center"
+            >
+              <Link href={slide.href}>
+                <img
+                  alt={`Slide ${slide.label}`}
+                  className="object-contain w-full h-64"
+                  src={slide.src}
+                />
+              </Link>
             </div>
           ))}
         </div>
@@ -60,7 +68,7 @@ const Carousel: React.FC<{ slides: string[] }> = ({ slides }) => {
           <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
-    </>
+    </div>
   );
 };
 

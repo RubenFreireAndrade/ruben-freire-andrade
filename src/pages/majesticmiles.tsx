@@ -3,7 +3,7 @@ import MAutoComplete from "../assets/mm-autocomplete.gif";
 import MJobReceived from "../assets/mm-job-received.png";
 
 import DefaultLayout from "@/layouts/default";
-import { subtitle, title } from "@/components/primitives";
+import { title } from "@/components/primitives";
 
 export default function MajesticMiles() {
   return (
@@ -14,7 +14,7 @@ export default function MajesticMiles() {
             <h1 className={title()}>Majestic Miles</h1>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-14">
             <p className="text-medium">
               I designed and deployed a website for Majestic Miles, a chauffeur
               service startup, using React and Tailwind CSS to create a sleek,
@@ -33,27 +33,22 @@ export default function MajesticMiles() {
             </p>
           </div>
 
-          <div className="mb-8">
-            <div className={subtitle()}>PlaceKit Autocomplete</div>
-            <img
-              alt="PlaceKit Autocomplete"
-              className="w-full rounded shadow-lg mt-4"
-              src={MAutoComplete}
-            />
+          <div className="mb-14">
+            <div className="text-2xl font-semibold">PlaceKit Autocomplete</div>
             <p className="mt-4 text-medium">
               The PlaceKit Autocomplete API allows users to quickly input their
               pickup and destination addresses, with suggestions for common
               locations to speed up the process and minimize errors.
             </p>
+            <img
+              alt="PlaceKit Autocomplete"
+              className="w-full rounded shadow-lg mt-4"
+              src={MAutoComplete}
+            />
           </div>
 
-          <div className="mb-8">
-            <div className={subtitle()}>Booking form + Email routing</div>
-            <img
-              alt="Booking Form"
-              className="w-full rounded shadow-lg mt-4"
-              src={MBooking}
-            />
+          <div className="mb-14">
+            <div className="text-2xl font-semibold">Booking form</div>
             <p className="mt-4 text-medium">
               The custom booking form was designed with key fields tailored to a
               chauffeur service, including date, time, and optional flight
@@ -61,15 +56,15 @@ export default function MajesticMiles() {
               streamlining the booking process for both customers and the
               business.
             </p>
-
-            <div className="text-3xl font-semibold mt-6">
-              Receiving job example
-            </div>
             <img
-              alt="Job Received"
+              alt="Booking Form"
               className="w-full rounded shadow-lg mt-4"
-              src={MJobReceived}
+              src={MBooking}
             />
+          </div>
+
+          <div className="mb-14">
+            <div className="text-2xl font-semibold mt-6">Email routing</div>
             <p className="mt-4 text-medium">
               For seamless communication, the site leverages SendGrid for email
               routing, ensuring timely and reliable email notifications. All
@@ -77,6 +72,11 @@ export default function MajesticMiles() {
               handled using Cloudflare’s serverless Workers, enabling fast,
               scalable request handling.
             </p>
+            <img
+              alt="Job Received"
+              className="w-full rounded shadow-lg mt-4"
+              src={MJobReceived}
+            />
           </div>
         </div>
       </section>
