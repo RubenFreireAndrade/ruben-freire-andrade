@@ -1,4 +1,7 @@
 export type SiteConfig = typeof siteConfig;
+import SApp from "../assets/ss-app.gif";
+import MAutoComplete from "../assets/mm-autocomplete.gif";
+import LApp from "../assets/UEDEMO_500w.gif";
 
 export const siteConfig = {
   name: "Ruben Freire Andrade",
@@ -35,17 +38,17 @@ export const siteConfig = {
     {
       label: "Lucid Forms",
       href: "/projects/lucid-forms",
-      src: "/src/assets/UEDEMO_500w.gif",
+      src: LApp,
     },
     {
       label: "SecureShare",
       href: "/projects/secureshare",
-      src: "/src/assets/ss-app.gif",
+      src: SApp,
     },
     {
       label: "Majestic Miles",
       href: "/projects/majestic-miles",
-      src: "/src/assets/mm-autocomplete.gif",
+      src: MAutoComplete,
     },
   ],
   links: {
